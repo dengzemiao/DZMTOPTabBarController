@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AFEEB2F31E94F518009EBBD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEEB2F21E94F518009EBBD8 /* AppDelegate.swift */; };
+		AFEEB2F51E94F518009EBBD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEEB2F41E94F518009EBBD8 /* ViewController.swift */; };
+		AFEEB2F81E94F518009EBBD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEEB2F61E94F518009EBBD8 /* Main.storyboard */; };
+		AFEEB2FA1E94F518009EBBD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFEEB2F91E94F518009EBBD8 /* Assets.xcassets */; };
+		AFEEB2FD1E94F518009EBBD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEEB2FB1E94F518009EBBD8 /* LaunchScreen.storyboard */; };
+		AFEEB3081E94F518009EBBD8 /* DZMTOPTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEEB3071E94F518009EBBD8 /* DZMTOPTabBarControllerTests.swift */; };
+		AFEEB3131E94F518009EBBD8 /* DZMTOPTabBarControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEEB3121E94F518009EBBD8 /* DZMTOPTabBarControllerUITests.swift */; };
+		AFEEB3241E94F54B009EBBD8 /* DZMCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEEB3211E94F54B009EBBD8 /* DZMCycleScrollView.swift */; };
+		AFEEB3251E94F54B009EBBD8 /* DZMTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEEB3221E94F54B009EBBD8 /* DZMTopBar.swift */; };
+		AFEEB3261E94F54B009EBBD8 /* DZMTopTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEEB3231E94F54B009EBBD8 /* DZMTopTabBarController.swift */; };
+		AFEEB3281E94F59F009EBBD8 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEEB3271E94F59F009EBBD8 /* TempViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFEEB3041E94F518009EBBD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFEEB2E71E94F518009EBBD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFEEB2EE1E94F518009EBBD8;
+			remoteInfo = DZMTOPTabBarController;
+		};
+		AFEEB30F1E94F518009EBBD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFEEB2E71E94F518009EBBD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFEEB2EE1E94F518009EBBD8;
+			remoteInfo = DZMTOPTabBarController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AFEEB2EF1E94F518009EBBD8 /* DZMTOPTabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DZMTOPTabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFEEB2F21E94F518009EBBD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFEEB2F41E94F518009EBBD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFEEB2F71E94F518009EBBD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFEEB2F91E94F518009EBBD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFEEB2FC1E94F518009EBBD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFEEB2FE1E94F518009EBBD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFEEB3031E94F518009EBBD8 /* DZMTOPTabBarControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DZMTOPTabBarControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFEEB3071E94F518009EBBD8 /* DZMTOPTabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DZMTOPTabBarControllerTests.swift; sourceTree = "<group>"; };
+		AFEEB3091E94F518009EBBD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFEEB30E1E94F518009EBBD8 /* DZMTOPTabBarControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DZMTOPTabBarControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFEEB3121E94F518009EBBD8 /* DZMTOPTabBarControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DZMTOPTabBarControllerUITests.swift; sourceTree = "<group>"; };
+		AFEEB3141E94F518009EBBD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFEEB3211E94F54B009EBBD8 /* DZMCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMCycleScrollView.swift; sourceTree = "<group>"; };
+		AFEEB3221E94F54B009EBBD8 /* DZMTopBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMTopBar.swift; sourceTree = "<group>"; };
+		AFEEB3231E94F54B009EBBD8 /* DZMTopTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMTopTabBarController.swift; sourceTree = "<group>"; };
+		AFEEB3271E94F59F009EBBD8 /* TempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFEEB2EC1E94F518009EBBD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFEEB3001E94F518009EBBD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFEEB30B1E94F518009EBBD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AFEEB2E61E94F518009EBBD8 = {
+			isa = PBXGroup;
+			children = (
+				AFEEB2F11E94F518009EBBD8 /* DZMTOPTabBarController */,
+				AFEEB3061E94F518009EBBD8 /* DZMTOPTabBarControllerTests */,
+				AFEEB3111E94F518009EBBD8 /* DZMTOPTabBarControllerUITests */,
+				AFEEB2F01E94F518009EBBD8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AFEEB2F01E94F518009EBBD8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFEEB2EF1E94F518009EBBD8 /* DZMTOPTabBarController.app */,
+				AFEEB3031E94F518009EBBD8 /* DZMTOPTabBarControllerTests.xctest */,
+				AFEEB30E1E94F518009EBBD8 /* DZMTOPTabBarControllerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFEEB2F11E94F518009EBBD8 /* DZMTOPTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				AFEEB3201E94F54B009EBBD8 /* DZMTOPTabBarController */,
+				AFEEB2F21E94F518009EBBD8 /* AppDelegate.swift */,
+				AFEEB2F41E94F518009EBBD8 /* ViewController.swift */,
+				AFEEB3271E94F59F009EBBD8 /* TempViewController.swift */,
+				AFEEB2F61E94F518009EBBD8 /* Main.storyboard */,
+				AFEEB2F91E94F518009EBBD8 /* Assets.xcassets */,
+				AFEEB2FB1E94F518009EBBD8 /* LaunchScreen.storyboard */,
+				AFEEB2FE1E94F518009EBBD8 /* Info.plist */,
+			);
+			path = DZMTOPTabBarController;
+			sourceTree = "<group>";
+		};
+		AFEEB3061E94F518009EBBD8 /* DZMTOPTabBarControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFEEB3071E94F518009EBBD8 /* DZMTOPTabBarControllerTests.swift */,
+				AFEEB3091E94F518009EBBD8 /* Info.plist */,
+			);
+			path = DZMTOPTabBarControllerTests;
+			sourceTree = "<group>";
+		};
+		AFEEB3111E94F518009EBBD8 /* DZMTOPTabBarControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AFEEB3121E94F518009EBBD8 /* DZMTOPTabBarControllerUITests.swift */,
+				AFEEB3141E94F518009EBBD8 /* Info.plist */,
+			);
+			path = DZMTOPTabBarControllerUITests;
+			sourceTree = "<group>";
+		};
+		AFEEB3201E94F54B009EBBD8 /* DZMTOPTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				AFEEB3211E94F54B009EBBD8 /* DZMCycleScrollView.swift */,
+				AFEEB3221E94F54B009EBBD8 /* DZMTopBar.swift */,
+				AFEEB3231E94F54B009EBBD8 /* DZMTopTabBarController.swift */,
+			);
+			path = DZMTOPTabBarController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFEEB2EE1E94F518009EBBD8 /* DZMTOPTabBarController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFEEB3171E94F518009EBBD8 /* Build configuration list for PBXNativeTarget "DZMTOPTabBarController" */;
+			buildPhases = (
+				AFEEB2EB1E94F518009EBBD8 /* Sources */,
+				AFEEB2EC1E94F518009EBBD8 /* Frameworks */,
+				AFEEB2ED1E94F518009EBBD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DZMTOPTabBarController;
+			productName = DZMTOPTabBarController;
+			productReference = AFEEB2EF1E94F518009EBBD8 /* DZMTOPTabBarController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AFEEB3021E94F518009EBBD8 /* DZMTOPTabBarControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFEEB31A1E94F518009EBBD8 /* Build configuration list for PBXNativeTarget "DZMTOPTabBarControllerTests" */;
+			buildPhases = (
+				AFEEB2FF1E94F518009EBBD8 /* Sources */,
+				AFEEB3001E94F518009EBBD8 /* Frameworks */,
+				AFEEB3011E94F518009EBBD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFEEB3051E94F518009EBBD8 /* PBXTargetDependency */,
+			);
+			name = DZMTOPTabBarControllerTests;
+			productName = DZMTOPTabBarControllerTests;
+			productReference = AFEEB3031E94F518009EBBD8 /* DZMTOPTabBarControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AFEEB30D1E94F518009EBBD8 /* DZMTOPTabBarControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFEEB31D1E94F518009EBBD8 /* Build configuration list for PBXNativeTarget "DZMTOPTabBarControllerUITests" */;
+			buildPhases = (
+				AFEEB30A1E94F518009EBBD8 /* Sources */,
+				AFEEB30B1E94F518009EBBD8 /* Frameworks */,
+				AFEEB30C1E94F518009EBBD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFEEB3101E94F518009EBBD8 /* PBXTargetDependency */,
+			);
+			name = DZMTOPTabBarControllerUITests;
+			productName = DZMTOPTabBarControllerUITests;
+			productReference = AFEEB30E1E94F518009EBBD8 /* DZMTOPTabBarControllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFEEB2E71E94F518009EBBD8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = DZM;
+				TargetAttributes = {
+					AFEEB2EE1E94F518009EBBD8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Manual;
+					};
+					AFEEB3021E94F518009EBBD8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AFEEB2EE1E94F518009EBBD8;
+					};
+					AFEEB30D1E94F518009EBBD8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AFEEB2EE1E94F518009EBBD8;
+					};
+				};
+			};
+			buildConfigurationList = AFEEB2EA1E94F518009EBBD8 /* Build configuration list for PBXProject "DZMTOPTabBarController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFEEB2E61E94F518009EBBD8;
+			productRefGroup = AFEEB2F01E94F518009EBBD8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFEEB2EE1E94F518009EBBD8 /* DZMTOPTabBarController */,
+				AFEEB3021E94F518009EBBD8 /* DZMTOPTabBarControllerTests */,
+				AFEEB30D1E94F518009EBBD8 /* DZMTOPTabBarControllerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFEEB2ED1E94F518009EBBD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFEEB2FD1E94F518009EBBD8 /* LaunchScreen.storyboard in Resources */,
+				AFEEB2FA1E94F518009EBBD8 /* Assets.xcassets in Resources */,
+				AFEEB2F81E94F518009EBBD8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFEEB3011E94F518009EBBD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFEEB30C1E94F518009EBBD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFEEB2EB1E94F518009EBBD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFEEB3241E94F54B009EBBD8 /* DZMCycleScrollView.swift in Sources */,
+				AFEEB2F51E94F518009EBBD8 /* ViewController.swift in Sources */,
+				AFEEB3281E94F59F009EBBD8 /* TempViewController.swift in Sources */,
+				AFEEB2F31E94F518009EBBD8 /* AppDelegate.swift in Sources */,
+				AFEEB3261E94F54B009EBBD8 /* DZMTopTabBarController.swift in Sources */,
+				AFEEB3251E94F54B009EBBD8 /* DZMTopBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFEEB2FF1E94F518009EBBD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFEEB3081E94F518009EBBD8 /* DZMTOPTabBarControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFEEB30A1E94F518009EBBD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFEEB3131E94F518009EBBD8 /* DZMTOPTabBarControllerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFEEB3051E94F518009EBBD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFEEB2EE1E94F518009EBBD8 /* DZMTOPTabBarController */;
+			targetProxy = AFEEB3041E94F518009EBBD8 /* PBXContainerItemProxy */;
+		};
+		AFEEB3101E94F518009EBBD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFEEB2EE1E94F518009EBBD8 /* DZMTOPTabBarController */;
+			targetProxy = AFEEB30F1E94F518009EBBD8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AFEEB2F61E94F518009EBBD8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFEEB2F71E94F518009EBBD8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AFEEB2FB1E94F518009EBBD8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFEEB2FC1E94F518009EBBD8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFEEB3151E94F518009EBBD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AFEEB3161E94F518009EBBD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFEEB3181E94F518009EBBD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = DZMTOPTabBarController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DZM.DZMTOPTabBarController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AFEEB3191E94F518009EBBD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = DZMTOPTabBarController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DZM.DZMTOPTabBarController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AFEEB31B1E94F518009EBBD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DZMTOPTabBarControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DZM.DZMTOPTabBarControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DZMTOPTabBarController.app/DZMTOPTabBarController";
+			};
+			name = Debug;
+		};
+		AFEEB31C1E94F518009EBBD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DZMTOPTabBarControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DZM.DZMTOPTabBarControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DZMTOPTabBarController.app/DZMTOPTabBarController";
+			};
+			name = Release;
+		};
+		AFEEB31E1E94F518009EBBD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = DZMTOPTabBarControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DZM.DZMTOPTabBarControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = DZMTOPTabBarController;
+			};
+			name = Debug;
+		};
+		AFEEB31F1E94F518009EBBD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = DZMTOPTabBarControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DZM.DZMTOPTabBarControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = DZMTOPTabBarController;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFEEB2EA1E94F518009EBBD8 /* Build configuration list for PBXProject "DZMTOPTabBarController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFEEB3151E94F518009EBBD8 /* Debug */,
+				AFEEB3161E94F518009EBBD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFEEB3171E94F518009EBBD8 /* Build configuration list for PBXNativeTarget "DZMTOPTabBarController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFEEB3181E94F518009EBBD8 /* Debug */,
+				AFEEB3191E94F518009EBBD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AFEEB31A1E94F518009EBBD8 /* Build configuration list for PBXNativeTarget "DZMTOPTabBarControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFEEB31B1E94F518009EBBD8 /* Debug */,
+				AFEEB31C1E94F518009EBBD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AFEEB31D1E94F518009EBBD8 /* Build configuration list for PBXNativeTarget "DZMTOPTabBarControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFEEB31E1E94F518009EBBD8 /* Debug */,
+				AFEEB31F1E94F518009EBBD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFEEB2E71E94F518009EBBD8 /* Project object */;
+}
