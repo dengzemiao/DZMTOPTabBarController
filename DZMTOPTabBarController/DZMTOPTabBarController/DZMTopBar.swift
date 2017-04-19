@@ -116,17 +116,11 @@ class DZMTopBar: UIView {
     private var selectButton:UIButton?
     
     /// 初始化方法
-    class func topBar(titles:[String]) ->DZMTopBar {
+    init(titles:[String]) {
         
-        let header = DZMTopBar()
+        super.init(frame: CGRect.zero)
         
-        header.creatUI(titles: titles)
-        
-        return header
-    }
-    
-    private override init(frame: CGRect) {
-        super.init(frame: frame)
+        creatUI(titles: titles)
         
         layer.masksToBounds = true
     }
