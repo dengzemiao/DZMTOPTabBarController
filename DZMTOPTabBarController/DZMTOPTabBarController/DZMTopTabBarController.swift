@@ -44,6 +44,21 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
     
     /// 滚动view
     private var scrollView:DZMCycleScrollView!
+
+    // MARK: -- 叠加 嵌套 使用
+    
+    /// 要实现 (必须) 请继续使用 view.frame.size.height 来获取高度
+    var viewHeight:CGFloat?
+    
+    /// 要实现 (必须)
+    override func loadView() {
+        super.loadView()
+        
+        if viewHeight != nil {
+            
+            view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: viewHeight!)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -156,13 +171,13 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
         
         if showToNavigationBar { // 显示到导航栏上
            
-            topBar.frame = CGRect(x: 0, y: 0, width: (UIScreen.main.bounds.size.width - 2*itemW), height: 44)
+            topBar.frame = CGRect(x: 0, y: 0, width: (view.frame.size.width - 2*itemW), height: 44)
             
             navigationItem.titleView = topBar
             
         }else{
             
-            topBar.frame = CGRect(x: 0, y: CGFloat(topBarY), width: UIScreen.main.bounds.size.width, height: topBarHeight)
+            topBar.frame = CGRect(x: 0, y: CGFloat(topBarY), width:view.frame.size.width, height: topBarHeight)
             view.addSubview(topBar)
         }
     }
@@ -172,7 +187,7 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
         
         // 滚动view
         let scrollViewY = showToNavigationBar ? ((navigationController != nil && !navigationController!.isNavigationBarHidden) ? 64 : 0) : topBar.frame.maxY
-        var scrollViewH = UIScreen.main.bounds.size.height - scrollViewY
+        var scrollViewH = view.frame.size.height - scrollViewY
         
         // tabBar 是否隐藏了
         scrollViewH = isTabBarHidden ? scrollViewH : (scrollViewH - 48)
@@ -186,7 +201,7 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
         scrollView.delegate = self
         scrollView.openTap = false
         view.addSubview(scrollView)
-        scrollView.frame = CGRect(x: 0, y: scrollViewY, width: UIScreen.main.bounds.size.width, height: scrollViewH)
+        scrollView.frame = CGRect(x: 0, y: scrollViewY, width: view.frame.size.width, height: scrollViewH)
     }
     
     
