@@ -30,6 +30,9 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
     /// 动画时间
     var animateDuration:TimeInterval = 0.2
     
+    /// 是否允许滚动 不能滚动则只能依靠 topBar 切换
+    var isScrollEnabled:Bool = true
+    
     /// 标题列表 重写 func getTitles() ->[String] {}
     private var titles:[String] = []
     
@@ -179,6 +182,7 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
         scrollView.limitScroll = limitScroll
         scrollView.animateDuration = animateDuration
         scrollView.initSelectIndex = initSelectIndex
+        scrollView.isScrollEnabled = isScrollEnabled
         scrollView.delegate = self
         scrollView.openTap = false
         view.addSubview(scrollView)
@@ -196,7 +200,7 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
             addChildViewController(controller)
         }
         
-        scrollView.scrollIndex(index: index, animated: true)
+        scrollView.scrollIndex(index: index, animated: isScrollEnabled)
     }
     
     

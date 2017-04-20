@@ -12,11 +12,14 @@ class ViewController: DZMTopTabBarController {
 
     override func viewDidLoad() {
         
-        // 进行无线滚动
+        // 禁止无线滚动
 //        limitScroll = false
         
         // 轮播标题显示到导航栏上
         showToNavigationBar = true
+        
+        // 禁止滚动
+//        isScrollEnabled = false
         
         super.viewDidLoad()
         

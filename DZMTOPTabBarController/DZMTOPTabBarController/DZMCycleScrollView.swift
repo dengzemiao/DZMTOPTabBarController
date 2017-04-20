@@ -57,12 +57,43 @@ class DZMCycleScrollView: UIView,UIScrollViewDelegate {
     /// 动画时间
     var animateDuration:TimeInterval = 0.25
     
+    /// scrollView.isScrollEnabled
+    var isScrollEnabled:Bool = true {
+        
+        didSet{
+            
+            scrollView.isScrollEnabled = isScrollEnabled
+        }
+    }
+    
+    /// scrollView.isPagingEnabled
+    var isPagingEnabled:Bool = true {
+        
+        didSet{
+            
+            scrollView.isPagingEnabled = isPagingEnabled
+        }
+    }
+    
     /// 是否开启点击手势
     var openTap:Bool = true {
         
         didSet{
         
             tap.isEnabled = openTap
+        }
+    }
+    
+    /// scrollView.contentOffset
+    var contentOffset:CGPoint {
+        
+        get{
+            return scrollView.contentOffset
+        }
+        
+        set{
+            
+            scrollView.contentOffset = newValue
         }
     }
     
@@ -80,14 +111,6 @@ class DZMCycleScrollView: UIView,UIScrollViewDelegate {
         
         get{
             return scrollView.contentSize
-        }
-    }
-    
-    /// scrollView.contentOffset 只允许获取
-    var contentOffset:CGPoint {
-        
-        get{
-            return scrollView.contentOffset
         }
     }
     
@@ -145,7 +168,8 @@ class DZMCycleScrollView: UIView,UIScrollViewDelegate {
         scrollView = UIScrollView()
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
-        scrollView.isPagingEnabled = true
+        scrollView.isPagingEnabled = isPagingEnabled
+        scrollView.isScrollEnabled = isScrollEnabled
         scrollView.delegate = self
         scrollView.bounces = bounces
         addSubview(scrollView)
@@ -389,7 +413,7 @@ class DZMCycleScrollView: UIView,UIScrollViewDelegate {
     }
     
     /// 手势点击
-    func clickTap(tap:UITapGestureRecognizer) {
+    @objc private func clickTap(tap:UITapGestureRecognizer) {
         
         if (views.count > 0) {
             
@@ -447,7 +471,7 @@ class DZMCycleScrollView: UIView,UIScrollViewDelegate {
     
     var TempCurrentIndex = 99 // 临时记录值 只要比 views.count 大即可
     
-    func synchronization(_ scrollView: UIScrollView) {
+    private func synchronization(_ scrollView: UIScrollView) {
       
         currentIndex = NSInteger(scrollView.contentOffset.x / frame.size.width + 0.5)
         
