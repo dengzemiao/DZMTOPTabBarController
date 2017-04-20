@@ -314,31 +314,6 @@ class DZMCycleScrollView: UIView,UIScrollViewDelegate {
         }
     }
     
-    /// 通过 view 获取截屏图片
-    private func imageWithView(view:UIView?) ->UIImage? {
-        
-        var image:UIImage? = nil
-        
-        if (view != nil) {
-            
-            UIGraphicsBeginImageContextWithOptions(view!.frame.size, false, 0.5)
-            
-            let context = UIGraphicsGetCurrentContext()
-            
-            if (context != nil) {
-                
-                view!.layer.render(in: context!)
-                
-                image = UIGraphicsGetImageFromCurrentImageContext()
-                
-            }
-            
-            UIGraphicsEndImageContext()
-        }
-        
-        return image
-    }
-    
     /// scrollView layoutSubviews
     private func scrollViewSetNeedsLayout() {
         
@@ -469,7 +444,7 @@ class DZMCycleScrollView: UIView,UIScrollViewDelegate {
     
     /// 计算位置
     
-    var TempCurrentIndex = 99 // 临时记录值 只要比 views.count 大即可
+    private var TempCurrentIndex = 99 // 临时记录值 只要比 views.count 大即可
     
     private func synchronization(_ scrollView: UIScrollView) {
       
@@ -623,7 +598,7 @@ class DZMCycleScrollView: UIView,UIScrollViewDelegate {
     // MARK: -- 定时器 ---------------------------
     
     /// 添加计时器
-    private func addTimer() {
+    func addTimer() {
         
         if views.count > TempNumberOne {
             
@@ -634,7 +609,7 @@ class DZMCycleScrollView: UIView,UIScrollViewDelegate {
     }
     
     /// 删除定时器
-    private func removeTimer() {
+    func removeTimer() {
         
         if timer != nil {
             
