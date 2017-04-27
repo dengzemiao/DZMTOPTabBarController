@@ -125,13 +125,39 @@ class DZMTopBar: UIView {
         layer.masksToBounds = true
     }
     
-    /// 选中按钮
+    /// 选中指定的按钮
     func selectIndex(index:NSInteger) {
         
         selectButton(button: buttons[index])
     }
     
-    /// 滚动到指定索引
+    /// TempView 根据传入的 index 进行动画移动
+    func scrollTempViewOfIndex(index:NSInteger, animated:Bool) {
+        
+        let count = buttons.count
+        
+        let h:CGFloat = frame.size.height
+        
+        let scrollBarH:CGFloat = self.scrollBarH
+        
+        let scrollBarBottomSpace:CGFloat = self.scrollBarBottomSpace
+        
+        let scrollBarW:CGFloat = frame.size.width / CGFloat(count)
+        
+        if animated {
+            
+            UIView.animate(withDuration: animateDuration) { [weak self] ()->Void in
+                
+                self?.scrollBar.frame = CGRect(x: CGFloat(index) * scrollBarW, y: h - scrollBarH - scrollBarBottomSpace, width: scrollBarW, height: scrollBarH)
+            }
+            
+        }else{
+            
+            scrollBar.frame = CGRect(x: CGFloat(index) * scrollBarW, y: h - scrollBarH - scrollBarBottomSpace, width: scrollBarW, height: scrollBarH)
+        }
+    }
+    
+    /// TempView 根据传入的X 进行移动
     func scrollTempViewX(x:CGFloat) {
         
         scrollBar.frame.origin = CGPoint(x:x,y:scrollBar.frame.origin.y)
@@ -185,31 +211,12 @@ class DZMTopBar: UIView {
         addSubview(scrollBar)
     }
     
-    /// 滚动到指定索引
-    private func scrollIndex(index:NSInteger) {
-        
-        let count = buttons.count
-        
-        let h:CGFloat = frame.size.height
-        
-        let scrollBarH:CGFloat = self.scrollBarH
-        
-        let scrollBarBottomSpace:CGFloat = self.scrollBarBottomSpace
-        
-        let scrollBarW:CGFloat = frame.size.width / CGFloat(count)
-        
-        UIView.animate(withDuration: animateDuration) { [weak self] ()->Void in
-            
-            self?.scrollBar.frame = CGRect(x: CGFloat(index) * scrollBarW, y: h - scrollBarH - scrollBarBottomSpace, width: scrollBarW, height: scrollBarH)
-        }
-    }
-    
     /// 点击按钮
     @objc private func clickButton(button:UIButton) {
         
         selectButton(button: button)
         
-        scrollIndex(index: button.tag)
+        scrollTempViewOfIndex(index: button.tag, animated: true)
         
         delegate?.topBar?(topBar: self, clickToIndex: button.tag)
     }

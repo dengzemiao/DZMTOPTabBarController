@@ -37,16 +37,38 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
     var isScrollEnabled:Bool = true
     
     /// 标题列表 重写 func getTitles() ->[String] {}
-    private var titles:[String] = []
+    private(set) var titles:[String] = []
     
     /// 显示控制器 重写 func getControllers(viewHeight:CGFloat) ->[UIViewController] {}
-    private var controllers:[UIViewController] = []
+    private(set) var controllers:[UIViewController] = []
+    
+    /// 当前显示的控制器
+    private(set) weak var currentController:UIViewController?
+    
+    /// 当前显示控制器的索引
+    private(set) var currentIndex:NSInteger = 0
     
     /// topBar
     private(set) var topBar:DZMTopBar!
     
     /// 滚动view
-    private var scrollView:DZMCycleScrollView!
+    private(set) var scrollView:DZMCycleScrollView!
+    
+    // MARK: -- 选中使用
+    func selectIndex(index:NSInteger, animated:Bool) {
+        
+        if currentIndex == index {return}
+        
+        currentIndex = index
+        
+        showIndexWithAddController(index: index)
+        
+        topBar.selectIndex(index: index)
+        
+        topBar.scrollTempViewOfIndex(index: index, animated: true)
+        
+        scrollView.scrollIndex(index: index, animated: animated)
+    }
 
     // MARK: -- 叠加 嵌套 使用
     
@@ -171,6 +193,7 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
         topBar.initSelectIndex = initSelectIndex
         topBar.delegate = self
         topBar.backgroundColor = UIColor.clear
+        currentIndex = initSelectIndex
         
         if showToNavigationBar { // 显示到导航栏上
            
@@ -211,12 +234,9 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
     // MARK: -- DZMTopBarDelegate
     func topBar(topBar: DZMTopBar, clickToIndex index: NSInteger) {
         
-        let controller = controllers[index]
+        currentIndex = index
         
-        if !childViewControllers.contains(controller) { // 不包含该控制器
-            
-            addChildViewController(controller)
-        }
+        showIndexWithAddController(index: index)
         
         scrollView.scrollIndex(index: index, animated: isScrollEnabled)
     }
@@ -224,8 +244,12 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
     
     // MARK: -- DZMCycleScrollViewDelegate
     func cycleScrollView(cycleScrollView: DZMCycleScrollView, scrollToIndex index: NSInteger) {
+        
+        currentIndex = index
+        
+        showIndexWithAddController(index: index)
     
-        topBar.selectIndex(index: cycleScrollView.currentIndex)
+        topBar.selectIndex(index: index)
     }
     
     func cycleScrollViewDidScroll(cycleScrollView: DZMCycleScrollView) {
@@ -235,6 +259,27 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
         let x = contentOffsetX / (cycleScrollView.frame.width / topBar.buttonW)
         
         topBar.scrollTempViewX(x: x)
+    }
+    
+    // MARK: -- 添加显示的控制器
+    private func showIndexWithAddController(index: NSInteger) {
+        
+        let controller = controllers[index]
+        
+        currentController?.viewWillDisappear(true)
+        
+        controller.viewWillAppear(true)
+        
+        if !childViewControllers.contains(controller) { // 不包含该控制器
+            
+            addChildViewController(controller)
+        }
+        
+        currentController?.viewDidDisappear(true)
+        
+        controller.viewDidAppear(true)
+        
+        currentController = controller
     }
 
     override func didReceiveMemoryWarning() {
