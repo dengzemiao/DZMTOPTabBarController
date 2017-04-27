@@ -24,6 +24,9 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
     /// tabBar 是否隐藏
     var isTabBarHidden:Bool = true
     
+    /// navigationBar 是否隐藏 不设置值则使用系统的navigationController!.isNavigationBarHidden 设置了则强制使用该属性
+    var isNavigationBarHidden:Bool?
+    
     /// 初始化选中
     var initSelectIndex:NSInteger = 0
     
@@ -162,7 +165,7 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
     private func creatHeaderBar() {
         
         // 导航栏
-        let topBarY = (navigationController != nil && !navigationController!.isNavigationBarHidden) ? 64 : 0
+        let topBarY = (navigationController != nil && (isNavigationBarHidden != nil ? (isNavigationBarHidden!) : (navigationController!.isNavigationBarHidden))) ? 0 : 64
         topBar = DZMTopBar(titles:titles)
         topBar.animateDuration = animateDuration
         topBar.initSelectIndex = initSelectIndex
