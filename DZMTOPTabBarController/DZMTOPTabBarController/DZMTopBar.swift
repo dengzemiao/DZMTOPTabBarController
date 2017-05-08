@@ -238,22 +238,26 @@ class DZMTopBar: UIView {
     }
     
     override func layoutSubviews() {
+        
         super.layoutSubviews()
         
-        let count = buttons.count
-        
-        buttonW = frame.size.width / CGFloat(count)
-        
-        for i in 0..<count {
+        if !buttons.isEmpty {
             
-            let button = buttons[i]
+            let count = buttons.count
             
-            button.frame = CGRect(x: CGFloat(i) * buttonW , y: 0, width: buttonW, height: frame.size.height)
+            buttonW = frame.size.width / CGFloat(count)
+            
+            for i in 0..<count {
+                
+                let button = buttons[i]
+                
+                button.frame = CGRect(x: CGFloat(i) * buttonW , y: 0, width: buttonW, height: frame.size.height)
+            }
+            
+            scrollBar.frame = CGRect(x: CGFloat(initSelectIndex) * buttonW, y: frame.size.height - scrollBarH - scrollBarBottomSpace, width: buttonW, height: scrollBarH)
+            
+            clickButton(button: buttons[initSelectIndex])
         }
-        
-        scrollBar.frame = CGRect(x: CGFloat(initSelectIndex) * buttonW, y: frame.size.height - scrollBarH - scrollBarBottomSpace, width: buttonW, height: scrollBarH)
-        
-        clickButton(button: buttons[initSelectIndex])
     }
     
     

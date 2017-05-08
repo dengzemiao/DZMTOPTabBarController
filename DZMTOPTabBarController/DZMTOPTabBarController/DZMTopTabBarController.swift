@@ -266,14 +266,16 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
         
         let controller = controllers[index]
         
-        currentController?.viewWillDisappear(true)
+        if currentController == controller {return}
         
-        controller.viewWillAppear(true)
+        currentController?.viewWillDisappear(true)
         
         if !childViewControllers.contains(controller) { // 不包含该控制器
             
             addChildViewController(controller)
         }
+        
+        controller.viewWillAppear(true)
         
         currentController?.viewDidDisappear(true)
         
@@ -309,16 +311,7 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
         
         currentController?.viewDidDisappear(animated)
     }
-    
-    deinit {
-        
-        for controller in controllers {
-            
-            controller.removeFromParentViewController()
-        }
-        
-        controllers.removeAll()
-    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
