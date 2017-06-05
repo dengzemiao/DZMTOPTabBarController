@@ -11,7 +11,7 @@ import UIKit
 @objc protocol DZMTopBarDelegate:NSObjectProtocol {
     
     /// 点击哪一个index
-    @objc optional func topBar(topBar:DZMTopBar,clickToIndex index:NSInteger)
+    @objc optional func topBar(topBar:DZMTopBar,clickToIndex index:NSInteger, title:String)
 }
 
 class DZMTopBar: UIView {
@@ -214,11 +214,13 @@ class DZMTopBar: UIView {
     /// 点击按钮
     @objc private func clickButton(button:UIButton) {
         
+        if selectButton == button {return}
+        
         selectButton(button: button)
         
         scrollTempViewOfIndex(index: button.tag, animated: true)
         
-        delegate?.topBar?(topBar: self, clickToIndex: button.tag)
+        delegate?.topBar?(topBar: self, clickToIndex: button.tag, title:titles[button.tag])
     }
     
     /// 选中按钮

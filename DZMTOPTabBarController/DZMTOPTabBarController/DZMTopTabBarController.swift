@@ -232,7 +232,7 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
     
     
     // MARK: -- DZMTopBarDelegate
-    func topBar(topBar: DZMTopBar, clickToIndex index: NSInteger) {
+    func topBar(topBar: DZMTopBar, clickToIndex index: NSInteger, title:String) {
         
         currentIndex = index
         
