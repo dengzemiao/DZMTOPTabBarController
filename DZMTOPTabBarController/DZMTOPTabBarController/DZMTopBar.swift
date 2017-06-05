@@ -175,6 +175,8 @@ class DZMTopBar: UIView {
     /// 指定更新title
     func updateTitle(title:String,index:NSInteger) {
         
+        titles[index] = title
+        
         let button:UIButton = buttons[index]
         
         button.setTitle(title, for: .normal)
