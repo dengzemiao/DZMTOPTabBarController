@@ -88,7 +88,6 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // 控件想要从00开始需要设置这两个属性
         // 显示状态栏 加上这句可以全部从00开始 设置隐藏显示导航栏全部控件不会移动  不加上 全部视图控件则会根据是否有导航栏自己上下调整位置
         extendedLayoutIncludesOpaqueBars = true
         
@@ -226,6 +225,9 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
         scrollView.isScrollEnabled = isScrollEnabled
         scrollView.delegate = self
         scrollView.openTap = false
+        if #available(iOS 11.0, *) {
+            scrollView.contentInsetAdjustmentBehavior = .never
+        }
         view.addSubview(scrollView)
         scrollView.frame = CGRect(x: 0, y: scrollViewY, width: view.frame.size.width, height: scrollViewH)
     }

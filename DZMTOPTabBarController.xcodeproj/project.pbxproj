@@ -213,6 +213,7 @@
 				TargetAttributes = {
 					AFEEB2EE1E94F518009EBBD8 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2PPP498VY6;
 						ProvisioningStyle = Manual;
 					};
 					AFEEB3021E94F518009EBBD8 = {
@@ -434,13 +435,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2PPP498VY6;
 				INFOPLIST_FILE = DZMTOPTabBarController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DZM.DZMTOPTabBarController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanjue.appTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0eeb4dda-c63e-4113-8e3a-7017e8b7342e";
+				PROVISIONING_PROFILE_SPECIFIER = HJ_APPTest_Dev_P;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -449,13 +453,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2PPP498VY6;
 				INFOPLIST_FILE = DZMTOPTabBarController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DZM.DZMTOPTabBarController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanjue.appTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0eeb4dda-c63e-4113-8e3a-7017e8b7342e";
+				PROVISIONING_PROFILE_SPECIFIER = HJ_APPTest_Dev_P;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -533,6 +540,7 @@
 				AFEEB3191E94F518009EBBD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFEEB31A1E94F518009EBBD8 /* Build configuration list for PBXNativeTarget "DZMTOPTabBarControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +549,7 @@
 				AFEEB31C1E94F518009EBBD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFEEB31D1E94F518009EBBD8 /* Build configuration list for PBXNativeTarget "DZMTOPTabBarControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +558,7 @@
 				AFEEB31F1E94F518009EBBD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
