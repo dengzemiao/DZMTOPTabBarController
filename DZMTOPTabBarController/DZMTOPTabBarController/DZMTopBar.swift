@@ -90,15 +90,14 @@ class DZMTopBar: UIView {
             setNeedsLayout()
         }
     }
-    
-    /// 初始化选中
-    var initSelectIndex:NSInteger = 0
-    
     /// 动画时间
     var animateDuration:TimeInterval = 0.2
     
     /// 按钮宽度
     var buttonW:CGFloat = 0
+    
+    /// 选中
+    private var selectIndex:NSInteger = 0
     
     /// 滑动view
     private var scrollBar:UIView!
@@ -127,6 +126,8 @@ class DZMTopBar: UIView {
     
     /// 选中指定的按钮
     func selectIndex(index:NSInteger) {
+        
+        selectIndex = index
         
         selectButton(button: buttons[index])
     }
@@ -258,9 +259,7 @@ class DZMTopBar: UIView {
                 button.frame = CGRect(x: CGFloat(i) * buttonW , y: 0, width: buttonW, height: frame.size.height)
             }
             
-            scrollBar.frame = CGRect(x: CGFloat(initSelectIndex) * buttonW, y: frame.size.height - scrollBarH - scrollBarBottomSpace, width: buttonW, height: scrollBarH)
-            
-            clickButton(button: buttons[initSelectIndex])
+            scrollBar.frame = CGRect(x: CGFloat(selectIndex) * buttonW, y: frame.size.height - scrollBarH - scrollBarBottomSpace, width: buttonW, height: scrollBarH)
         }
     }
     

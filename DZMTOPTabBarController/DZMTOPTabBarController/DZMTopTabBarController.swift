@@ -189,7 +189,7 @@ class DZMTopTabBarController: UIViewController,DZMTopBarDelegate,DZMCycleScrollV
         let topBarY = (navigationController != nil && (isNavigationBarHidden != nil ? (!isNavigationBarHidden!) : (!navigationController!.isNavigationBarHidden))) ? 64 : 0
         topBar = DZMTopBar(titles:titles)
         topBar.animateDuration = animateDuration
-        topBar.initSelectIndex = initSelectIndex
+        topBar.selectIndex(index: initSelectIndex)
         topBar.delegate = self
         topBar.backgroundColor = UIColor.clear
         currentIndex = initSelectIndex

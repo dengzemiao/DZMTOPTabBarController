@@ -21,6 +21,8 @@ class ViewController: DZMTopTabBarController {
         // 禁止滚动
 //        isScrollEnabled = false
         
+        initSelectIndex = 1
+        
         super.viewDidLoad()
         
         // 支持动态更新标题列表
